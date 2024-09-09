@@ -342,11 +342,11 @@ CREATE TABLE Category (
 	CategoryName nvarchar(1000),
 ) ON [PRIMARY]
 GO
-INSERT INTO dbo.Category(CategoryName)VALUES(N'Hat')
-INSERT INTO dbo.Category(CategoryName)VALUES(N'Shirt')
-INSERT INTO dbo.Category(CategoryName)VALUES(N'Legwear')
-INSERT INTO dbo.Category(CategoryName)VALUES(N'Footwear')
-INSERT INTO dbo.Category(CategoryName)VALUES(N'Accessories');
+INSERT INTO dbo.Category(CategoryName) VALUES (N'Điện thoại di động');
+INSERT INTO dbo.Category(CategoryName) VALUES (N'Máy tính & Laptop');
+INSERT INTO dbo.Category(CategoryName) VALUES (N'Âm thanh & Hình ảnh');
+INSERT INTO dbo.Category(CategoryName) VALUES (N'Thiết bị nhà thông minh');
+INSERT INTO dbo.Category(CategoryName) VALUES (N'Thiết bị gia dụng');
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE [dbo].[SubCategory](
 	[SubCategoryID] [int] PRIMARY KEY  IDENTITY(1,1) ,
@@ -355,16 +355,16 @@ CREATE TABLE [dbo].[SubCategory](
 	constraint CategoryID FOREIGN KEY (CategoryID)  REFERENCES Category(CategoryID)
 	)
 GO
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'Fedora',1)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'Panama',1)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'T-Shirt',2)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'Sweater',2)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'Jean',3)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'Skirt',3)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'Shoe',4)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES(N'Sock',4)
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES (N'Backpacks',5);
-INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID)VALUES (N'Rings and Chains',5);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Smartphone', 1);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Phụ kiện điện thoại', 1);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Laptop', 2);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'PC', 2);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Loa', 3);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'TV thông minh', 3);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Camera an ninh', 4);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Khóa cửa thông minh', 4);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Máy giặt', 5);
+INSERT INTO dbo.SubCategory(SubCategoryName,CategoryID) VALUES (N'Lò vi sóng', 5);
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE ProductStatus (
@@ -376,29 +376,28 @@ GO
 INSERT INTO ProductStatus VALUES ( N'Available');
 INSERT INTO ProductStatus VALUES ( N'StopBusiness');
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
---https://www.stylight.com/Brands/
 CREATE TABLE Brand (
 	BrandID int NOT NULL IDENTITY(1, 1) PRIMARY KEY,
 	BrandName nvarchar(1000)
 ) ON [PRIMARY]
 GO
 
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Borsalino')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Bailey')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Mayser')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Tokyo Life')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Zombie')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'FREAKERS')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Karihada')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Icon Denim')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Hyperdenim VN')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Davies')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'EnvyLook')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Nike')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Vans')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Adidas')
-INSERT INTO dbo.Brand(BrandName)VALUES(N'Flaans')
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Apple');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Samsung');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Sony');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Dell');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'HP');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Asus');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Bose');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'LG');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Microsoft');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Xiaomi');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Panasonic');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Lenovo');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Huawei');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'JBL');
+INSERT INTO dbo.Brand(BrandName) VALUES (N'Philips');
+--------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE Product (
 	ProductID int NOT NULL IDENTITY(1, 1) PRIMARY KEY,
@@ -423,57 +422,47 @@ CREATE TABLE Product (
 GO
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-INSERT INTO Product VALUES (N'Borsalino Bogart Fur Felt Fedora',N'Borsalino celebrates its deep and long-lasting connection to the world of cinema with a special hat dedicated to Humphrey Bogart, the great Hollywood actor who loved the legendary felt hats produced in Alessandria.  The Bogart by Borsalino is created in collaboration with the Humphrey Bogart Estate.  This Limited Edition fedora features a 2 1/2" brim, 4 3/4" crown with centerdent, wide 2" grosgrain hat band, Alessandria brushed felt, decorative windcord, and bow with gold logo.  The interior has a black leather band with the gold-stamped Bogart phrase - Do everything. One thing may turn out right - and grey satin-lined interior with a printed silhouette of Humphrey Bogart and the Borsalino logo.  Made by hand in Italy, in the workshop in Alessandria.',9600000,7400000,23,1,2,100,1,1,0,0,0)
-INSERT INTO Product VALUES (N'Borsalino Seta Bicolore Fedora',N'The Borsalnio Seta Bicolore Fedora is a luxurious fur felt fedora with a brushed silk finish. With a 2 3/8" brim and a 4 1/4" crown, this is truly a classic fedora shape. Trimmed with a grosgrain hat band, this hat is a stylish option for any outfit! Fully lined and finished with a grosgrain sweatband for a soft fit. Made in Italy',6700000,5700000,15,1,2,100,1,1,0,0,0)
-INSERT INTO Product VALUES (N'Bailey Tate Braided Fedora',N'The Bailey Tate Braided Fedora is a soft, flexible braided fedora with a matching band for a clean summertime look. A short 2 inch turned up brim can be snapped down in front or worn up all around, and the interior is unlined for a breezy feel. Lightweight and flattering, this hat will become part of your everyday look.',1500000,1500000,0,1,2,100,1,2,0,0,0)
-INSERT INTO Product VALUES (N'Bailey Archer Braid Fedora',N'The Bailey Archer Braid Fedora is a short brimmed trilby fedora with a teardrop crown and stingy 1 5/8" snap brim for a modern silhouette. There is a two-tone stripe around the top of the crown that matches the hat band for a unique look that is flattering and fashionable. Soft and packable, this is a perfect lightweight hat for any occasion.',1700000 ,1700000 ,0,1,2,100,1,2,0,0,0)
-INSERT INTO Product VALUES (N'Bailey Craig Braided Fedora',N'The Breed collection from Bailey of Hollywood represents the spirit of free-thinking sophistication. The Craig Braided Fedora is a great example of that notion with its spectacular Milan braid design and array of color options. Details include a center dent crown, a 2" snap brim, a comfort sweatband, and a grosgrain ribbon hatband.',1700000 ,1700000 ,0,1,2,100,1,2,0,0,0)
-INSERT INTO Product VALUES (N'Mayser Calas Panama Straw Hat',N'The Mayser Calas Panama Straw Hat is a perfect summer hat made from natural straw. This straw hat features a 3 3/4" crown, 2 3/4" brim on sides and back and 2 7/8" in front, unique rope hatband with leather tabs, cloth sweatband, and sewn logo pin. Adhesive reinforcement at the crown protects the straw from cracking. Mayser is a premier German hatmaker that we are pleased to offer to our customers. Designed in Germany, hand-woven in Ecuador, finished in Slovakia.',2850000,2850000,0,2,2,100,1,3,0,0,0)
-INSERT INTO Product VALUES (N'Mayser Piero Panama Straw Hat',N'The Mayser Piero Panama Straw Hat is a handsome downbrim hat made from genuine panama straw. This panama features a 4" crown with open weave design, 2 1/2" brim on the sides and 2 5/8" front and back, leather hatband, cloth sweatband, and sewn logo pin. Adhesive reinforcement at the crown protects the straw from cracking. Mayser is a premier German hatmaker that we are pleased to offer to our customers. Designed in Germany, hand-woven in Ecuador, finished in Slovakia.',4000000 ,3800000,5,2,2,100,1,3,0,0,0)
-INSERT INTO Product VALUES (N'Mayser Nizza Panama Straw Hat',N'The Mayser Nizza Panama Straw Hat is a beautiful wide-brim fedora hat with a brisa fino weave. This panama fedora features a 4" crown, 3 1/8" brim, grosgrain band, cloth sweatband, sewn logo pin at the ribbon, and UV 60 sun protection. Adhesive reinforcement at the crown protects the straw from cracking. Mayser is a premier German hatmaker that we are pleased to offer to our customers. Designed in Germany, hand-woven in Ecuador, finished in Slovakia.',5500000 ,4950000 ,10,2,2,100,1,3,0,0,0)
-INSERT INTO Product VALUES (N'Bailey Rockett Endura Telescope Crown Hat',N'The Bailey Rockett Endura Telescope Crown Hat is an exciting new hat for the summer season made from a revolutionary Endura straw- a paper straw woven with a thermosetting yarn that allows the hat to get wet and keep its shape, making it totally rainproof! The classic telescope crown and wide 3 1/8 inch brim are a timeless fashionable look, with the hand rolled edge giving it a unique twist. The braided hat band is a beautifully made finishing touch to this handsome hat. Proudly Made in the USA.',2500000 ,2500000 ,0,2,2,100,1, 2,0,0,0)
-INSERT INTO Product VALUES (N'Bailey Hanson Shantung Hat',N'The Bailey Hanson Shantung Hat is a light Shantung fedora with a center dent crown and 2 1/2 inch snap brim. A crisp classic look, this hat is finished with a slim ribbon hat band and a removable feather. A smart choice for summer. Made in the USA.',2950000 ,2950000 ,0,2,2,100,1,2,0,0,0)
-INSERT INTO Product VALUES (N'Male T-Shirt I7TSH545I',N'Male T-Shirt I7TSH545I',190000,133000,30,3,2,100,1, 4,0,0,0)
-INSERT INTO Product VALUES (N'Male T-Shirt I7TSH535I',N'Male T-Shirt I7TSH535I',250000 ,250000,0,3,2,100,1,4,0,0,0)
-INSERT INTO Product VALUES (N'Female T-Shirt I9TSH553I',N'Female T-Shirt I9TSH553I',250000,25000,0,3,2,100,1,4,0,0,0)
-INSERT INTO Product VALUES (N'Female T-Shirt I9TSH569I',N'Female T-Shirt I9TSH569I',190000,190000,0,3,2,100,1,4,0,0,0)
-INSERT INTO Product VALUES (N'Female T-Shirt I9TSH545I',N'Female T-Shirt I9TSH545I',190000,57000 ,70,3,2,100,1,4,0,0,0)
-INSERT INTO Product VALUES (N'BLUE STRIPES SWEATER - WHITE',N'BLUE STRIPES SWEATER - WHITE',350000,350000,0,4,2,100,1,5,0,0,0)
-INSERT INTO Product VALUES (N'YELLOW STRIPES SWEATER - BLACK',N'YELLOW STRIPES SWEATER - BLACK',350000,350000,0,4,2,100,1,5,0,0,0)
-INSERT INTO Product VALUES (N'CLASSIC LOGO SWEATERS (NAVY)',N'CLASSIC LOGO SWEATERS (NAVY)',450000,450000,0,4,2,100,1,6,0,0,0)
-INSERT INTO Product VALUES (N'CLASSIC LOGO SWEATERS (SPORT GREY)',N'CLASSIC LOGO SWEATERS (SPORT GREY)',450000 ,450000 ,0 ,4 ,2 ,100 ,1 ,6 ,0,0,0)
-INSERT INTO Product VALUES (N'Oops_I_did_it_again_2002',N'Oops_I_did_it_again_2002',390000,312000,20,4,2,100,1,7,0,0,0)
-INSERT INTO Product VALUES (N'Jean Slim-fit Dark Blue W Butterfly Charms',N'Jean Slim-fit Dark Blue W Butterfly Charms',550000,275000,50,5,2,100,1,8,0,0,0)
-INSERT INTO Product VALUES (N'Jean Skinny Wash',N'Jean Skinny Wash',500000,400000,20,5,2,100,1,8,0,0,0)
-INSERT INTO Product VALUES (N'Jean Slim Dark Blue Wash W ICON DENIM Pocket',N'Jean Slim Dark Blue Wash W ICON DENIM Pocket',550000,385000 ,30,5,2,100,1,8,0,0,0)
-INSERT INTO Product VALUES (N'Black Gnu Zipper Jean',N'Black Gnu Zipper Jean',1253000,1253000,0,5,2,100,1,9,0,0, 0)
-INSERT INTO Product VALUES (N'Black Gao Zipper Jean',N'Black Gao Zipper Jean',1253000,1253000,0,5,2,100,1,9,0,0,0)
-INSERT INTO Product VALUES (N'DSS Skirt D Buckle',N'DSS Skirt D Buckle',285000,285000,0,6,2,100,1,10,0,0,0)
-INSERT INTO Product VALUES (N'DSS Skirt Davies Label',N'DSS Skirt Davies Label',285000,285000,0,6,2,100,1,10,0,0,0)
-INSERT INTO Product VALUES (N'ENVYLOOK A Long Skirt',N'ENVYLOOK A Long Skirt',750000,350000,53,6,2,100,1,11,0,0,0)
-INSERT INTO Product VALUES (N'ENVYLOOK Eilett Skirt',N'ENVYLOOK Eilett Skirt',399000 ,199000,50,6,2,100,1,11, 0, 0,0 )
-INSERT INTO Product VALUES (N'ENVYLOOK Linen-Belt Skirt',N'ENVYLOOK Linen-Belt Skirt',570000,299000,47,6,2,100,1,11, 0, 0, 0)
-INSERT INTO Product VALUES (N'Nike Air Zoom Winflo 7 CJ0291-005',N'Nike Air Zoom Winflo 7 CJ0291-005',2929000 ,2196750 ,25 ,7 ,2 ,100 ,1 ,12 ,0,0,0)
-INSERT INTO Product VALUES (N'Nike Benassi Slip Shoe 882410-010',N'Nike Benassi Slip Shoe 882410-010',1923000 ,961500 ,50 ,7 ,2 ,100 ,1 ,12 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Nike Benassi Slp 882410-008',N'Nike Benassi Slp 882410-008',1569000 , 784500,50 ,7 ,2 ,100 ,1 ,12 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Vans Slip-On Label Mix',N'Vans Slip-On Label Mix',1450000 ,1450000 ,0 ,7 ,2 ,100 ,1 ,13 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Vans Sk8-Hi',N'Vans Sk8-Hi',1850000 ,1850000 ,0,7,2,100,1,13, 0, 0, 0)
-INSERT INTO Product VALUES (N'Male Sock Pack 3 I7SOK201H',N'Male Sock Pack 3 I7SOK201H',50000 ,50000 ,0 ,8 ,2 ,100 ,1 ,4 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Male Sock I7SOK213E',N'Male Sock I7SOK213E', 15000, 15000, 0, 8, 2,100 ,1 ,4 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Male Sock I7SOK217E',N'Male Sock I7SOK217E',15000 ,15000 ,0 ,8 ,2 ,100 ,1 ,4 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Female Sock I9SOK015E',N'Female Sock I9SOK015E',15000 ,15000 ,0 ,8 ,2 ,100 ,1 ,4 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Female Sock I9SOK222E',N'Female Sock I9SOK222E',15000 ,15000 ,0 ,8 ,2 ,100 ,1 ,4,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Backpack V8BPK302I',N'Backpack V8BPK302I',690000 ,690000 ,0 ,9 ,2 ,100 ,1 ,4 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Backpack V8BPK300I',N'Backpack V8BPK300I',590000 ,590000 ,0 ,9 ,2 ,100 ,1 ,4 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Waterproof Backpack I7BPK003I',N'Waterproof Backpack I7BPK003I', 399000, 399000, 0, 9, 2, 100, 1, 4,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Unisex Adidas 4Athlts Id Bp FJ3924',N'Unisex Adidas 4Athlts Id Bp FJ3924', 1200000, 780000,35 ,9 ,2 ,100 ,1 ,14,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'Unisex Adidas Clas Bp Fabric GL0890',N'Unisex Adidas Clas Bp Fabric GL0890',700000 ,700000 ,0 ,9 ,2 ,100 ,1 ,14 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'FLAANS 925 SharpStar N',N'FLAANS 925 SharpStar N',356000 ,356000 ,0 ,10 ,2 ,100 ,1 ,15 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'FLAANS Bauli R',N'FLAANS Bauli R',156000 ,156000 ,0 ,10 ,2 ,100 ,1 ,15 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'FLAANS Vin Bold R',N'FLAANS Vin Bold R',156000 ,156000 ,0 ,10 ,2 ,100 ,1 ,15 ,0,0,0)
-INSERT INTO Product VALUES (N'FLAANS ChainBZ_N',N'FLAANS ChainBZ_N',516000 ,516000 ,0 ,10 ,2 ,100 ,1 ,15 ,0 ,0 ,0 )
-INSERT INTO Product VALUES (N'FLAANS 925 NewMoon N',N'FLAANS 925 NewMoon N',356000 ,356000 ,0 ,10 ,2 ,100 ,1 ,15 ,0 ,0 ,0 )
-
+INSERT INTO Product VALUES 
+(N'Apple Watch Series 8 GPS 45mm', N'Apple Watch với màn hình Retina Always-On, cảm biến nhiệt độ và theo dõi sức khỏe tối ưu.', 10990000, 9990000, 60, 1, 2, 100, 1, 5, 0, 0, 0),
+(N'Samsung Galaxy Watch 5 Pro 45mm', N'Smartwatch cao cấp với tính năng theo dõi sức khỏe, pin lâu và chống nước 5ATM.', 9990000, 8990000, 40, 2, 2, 100, 1, 6, 0, 0, 0),
+(N'Dell XPS 13 9310', N'Máy tính xách tay 13 inch với chip Intel Core i7 thế hệ 11 và màn hình 4K UHD cảm ứng.', 45990000, 42990000, 25, 3, 2, 100, 1, 7, 0, 0, 0),
+(N'MSI Gaming Laptop GF65 Thin', N'Laptop chơi game với chip Intel Core i7, card đồ họa RTX 3060 và màn hình 144Hz.', 29990000, 27990000, 35, 3, 2, 100, 1, 8, 0, 0, 0),
+(N'Bose QuietComfort 45', N'Tai nghe chống ồn tuyệt đối với âm thanh chất lượng cao và thời lượng pin lên đến 24 giờ.', 8990000, 7990000, 50, 4, 2, 100, 1, 9, 0, 0, 0),
+(N'JBL Flip 6', N'Loa Bluetooth chống nước IP67 với âm thanh sống động và thời lượng pin 12 giờ.', 2990000, 2490000, 80, 4, 2, 100, 1, 10, 0, 0, 0),
+(N'GoPro Hero 11 Black', N'Máy quay hành trình 5K với khả năng chống nước và ổn định hình ảnh tiên tiến.', 11990000, 10990000, 20, 5, 2, 100, 1, 11, 0, 0, 0),
+(N'Sony Alpha 7 IV', N'Máy ảnh mirrorless 33MP với khả năng quay video 4K và tính năng lấy nét tự động nhanh.', 55990000, 53990000, 10, 5, 2, 100, 1, 12, 0, 0, 0),
+(N'Canon EOS R6', N'Máy ảnh mirrorless với cảm biến full-frame 20MP và hệ thống ổn định hình ảnh 5 trục.', 65990000, 62990000, 8, 5, 2, 100, 1, 13, 0, 0, 0),
+(N'AirPods Pro 2', N'Tai nghe không dây với khả năng chống ồn chủ động và âm thanh không gian.', 5990000, 5490000, 120, 6, 2, 100, 1, 14, 0, 0, 0),
+(N'Samsung Galaxy Buds2 Pro', N'Tai nghe không dây chống ồn với âm thanh chất lượng cao và thiết kế nhỏ gọn.', 3990000, 3490000, 100, 6, 2, 100, 1, 15, 0, 0, 0),
+(N'Asus ROG Strix G15', N'Laptop gaming với chip AMD Ryzen 7, card đồ họa NVIDIA RTX 3050 và màn hình 144Hz.', 24990000, 22990000, 40, 3, 2, 100, 1, 16, 0, 0, 0),
+(N'Acer Predator Helios 300', N'Laptop gaming với chip Intel Core i7, RTX 3070 và màn hình 240Hz.', 36990000, 34990000, 15, 3, 2, 100, 1, 17, 0, 0, 0),
+(N'Google Pixel 7', N'Smartphone chạy Android với màn hình OLED 6.3 inch và camera AI tiên tiến.', 19990000, 18990000, 25, 1, 2, 100, 1, 18, 0, 0, 0),
+(N'Logitech MX Master 3', N'Chuột không dây cao cấp với khả năng điều chỉnh nhiều thiết bị và thời lượng pin lâu.', 2490000, 2190000, 70, 4, 2, 100, 1, 19, 0, 0, 0),
+(N'Logitech G Pro X Superlight', N'Chuột gaming không dây nhẹ nhất của Logitech với hiệu suất cao.', 3490000, 3290000, 30, 4, 2, 100, 1, 20, 0, 0, 0),
+(N'Anker PowerCore III Elite 25600mAh', N'Pin dự phòng với dung lượng lớn và hỗ trợ sạc nhanh PD 60W.', 1790000, 1590000, 90, 4, 2, 100, 1, 21, 0, 0, 0),
+(N'Anker Soundcore Liberty 3 Pro', N'Tai nghe không dây với âm thanh Hi-Res và chống ồn chủ động.', 3990000, 3490000, 60, 4, 2, 100, 1, 22, 0, 0, 0),
+(N'Apple Mac Mini M1 256GB', N'Máy tính để bàn nhỏ gọn với chip Apple M1 và khả năng xử lý mạnh mẽ.', 19990000, 17990000, 20, 3, 2, 100, 1, 23, 0, 0, 0),
+(N'LG Gram 17 2022', N'Laptop siêu nhẹ với màn hình 17 inch và pin lên đến 19 giờ.', 46990000, 43990000, 12, 3, 2, 100, 1, 24, 0, 0, 0),
+(N'Samsung T7 Portable SSD 1TB', N'Ổ cứng SSD di động với tốc độ truyền dữ liệu cực nhanh và khả năng chống va đập.', 2990000, 2790000, 100, 4, 2, 100, 1, 25, 0, 0, 0);
+(N'Microsoft Surface Pro 9', N'Máy tính bảng lai laptop với màn hình cảm ứng PixelSense 13 inch và chip Intel Core i7.', 34990000, 32990000, 30, 3, 2, 100, 1, 26, 0, 0, 0),
+(N'HP Spectre x360 14', N'Laptop 2 trong 1 với thiết kế mỏng nhẹ, màn hình OLED 13.5 inch và bộ xử lý Intel Core i7.', 42990000, 40990000, 25, 3, 2, 100, 1, 27, 0, 0, 0),
+(N'Lenovo Legion 5 Pro', N'Laptop gaming với chip AMD Ryzen 7, RTX 3070 và màn hình 16 inch 165Hz.', 35990000, 33990000, 18, 3, 2, 100, 1, 28, 0, 0, 0),
+(N'Sony WH-1000XM5', N'Tai nghe chống ồn hàng đầu với âm thanh chất lượng cao và thời lượng pin 30 giờ.', 8990000, 8490000, 50, 4, 2, 100, 1, 29, 0, 0, 0),
+(N'Xiaomi Mi Smart Band 7', N'Vòng tay thông minh với màn hình AMOLED và tính năng theo dõi sức khỏe.', 1290000, 999000, 150, 1, 2, 100, 1, 30, 0, 0, 0),
+(N'Razer BlackShark V2', N'Tai nghe gaming với âm thanh THX Spatial Audio và micro chống ồn.', 2990000, 2690000, 80, 4, 2, 100, 1, 31, 0, 0, 0),
+(N'Sandisk Extreme Portable SSD 1TB', N'Ổ cứng SSD di động với khả năng chống nước và chống sốc, tốc độ truyền tải lên đến 1050MB/s.', 3990000, 3590000, 100, 4, 2, 100, 1, 32, 0, 0, 0),
+(N'Garmin Forerunner 955', N'Đồng hồ thông minh thể thao với GPS tích hợp và các tính năng theo dõi tập luyện chi tiết.', 12990000, 11990000, 40, 1, 2, 100, 1, 33, 0, 0, 0),
+(N'DJI Mini 3 Pro', N'Máy bay không người lái với camera 4K, cảm biến chống va chạm và thời gian bay 34 phút.', 21990000, 20990000, 15, 5, 2, 100, 1, 34, 0, 0, 0),
+(N'Corsair K95 RGB Platinum', N'Bàn phím cơ cao cấp với đèn RGB và các phím macro tùy chỉnh.', 5490000, 4990000, 60, 4, 2, 100, 1, 35, 0, 0, 0);
+(N'Apple AirPods Pro 2', N'Tai nghe không dây với công nghệ chống ồn chủ động và âm thanh không gian.', 6990000, 6590000, 70, 4, 2, 100, 1, 36, 0, 0, 0),
+(N'Dell Alienware M15 R7', N'Laptop gaming với chip Intel Core i9, RTX 3080 và màn hình 15.6 inch 240Hz.', 59990000, 57990000, 12, 3, 2, 100, 1, 37, 0, 0, 0),
+(N'Google Pixel 7 Pro', N'Smartphone với camera 50MP, màn hình OLED 6.7 inch và chip Tensor G2.', 23990000, 22990000, 45, 2, 2, 100, 1, 38, 0, 0, 0),
+(N'Asus ROG Strix G15', N'Laptop gaming với chip AMD Ryzen 9, RTX 3070 và màn hình 15.6 inch 300Hz.', 43990000, 42990000, 20, 3, 2, 100, 1, 39, 0, 0, 0),
+(N'Samsung Galaxy Watch 5 Pro', N'Đồng hồ thông minh với tính năng theo dõi sức khỏe, GPS và thời lượng pin dài.', 10990000, 9990000, 50, 1, 2, 100, 1, 40, 0, 0, 0),
+(N'GoPro Hero 11 Black', N'Camera hành trình với khả năng quay video 5.3K, chống nước và tính năng ổn định hình ảnh.', 11990000, 11490000, 30, 5, 2, 100, 1, 41, 0, 0, 0),
+(N'LG UltraFine 32UN880', N'Màn hình 32 inch 4K UHD với hỗ trợ HDR và cổng USB-C.', 17990000, 16990000, 25, 6, 2, 100, 1, 42, 0, 0, 0),
+(N'Bose QuietComfort 45', N'Tai nghe chống ồn không dây với âm thanh cao cấp và thời lượng pin lên đến 24 giờ.', 8990000, 8490000, 65, 4, 2, 100, 1, 43, 0, 0, 0),
+(N'Microsoft Xbox Series X', N'Máy chơi game với ổ SSD 1TB, hỗ trợ 4K và công nghệ Ray Tracing.', 15990000, 15490000, 35, 5, 2, 100, 1, 44, 0, 0, 0);
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -485,92 +474,47 @@ REFERENCES [dbo].[Product] ([ProductID])
 	)
 	go
 
-INSERT INTO dbo.ProductImg VALUES (1,'Borsalino-Bogart.jpg');
-INSERT INTO dbo.ProductImg VALUES (2,'390310-Brosalino-Hats-Brown.jpg');
-INSERT INTO dbo.ProductImg VALUES (3,'81711BH-Bailey-Latte.jpg');
-INSERT INTO dbo.ProductImg VALUES (3,'81711BH-Bailey-LtGrey.jpg');
-INSERT INTO dbo.ProductImg VALUES (3,'81711BH-Bailey-White.jpg');
-INSERT INTO dbo.ProductImg VALUES (4,'81802-Bailey-Hats-Smoke.jpg');
-INSERT INTO dbo.ProductImg VALUES (4,'81802-Bailey-Hats-Coffee.jpg');
-INSERT INTO dbo.ProductImg VALUES (5,'81717BHGRAPHITE.jpg');
-INSERT INTO dbo.ProductImg VALUES (5,'81717BHWHITE.jpg');
-INSERT INTO dbo.ProductImg VALUES (5,'81717BHBLACK.jpg');
-INSERT INTO dbo.ProductImg VALUES (6,'1270891-MayserCalas-2.jpg');
-INSERT INTO dbo.ProductImg VALUES (7,'1230091-MayserPiero.jpg');
-INSERT INTO dbo.ProductImg VALUES (8,'1212551-Nizza.jpg');
-INSERT INTO dbo.ProductImg VALUES (8,'HatBox.jpg');
-INSERT INTO dbo.ProductImg VALUES (9,'5000BH_TAN.jpg');
-INSERT INTO dbo.ProductImg VALUES (10,'63112-Bailey-Hats-Black.jpg');
-INSERT INTO dbo.ProductImg VALUES (10,'63112-NATURALPEACOCK.jpg');
-INSERT INTO dbo.ProductImg VALUES (10,'63112-Bailey-Hats-Cloud.jpg');
-INSERT INTO dbo.ProductImg VALUES (11,'_o_t-shirt_nam_c_tr_n_i7tsh545i_ghi_m-xanh_ng_c_190000.jpg');
-INSERT INTO dbo.ProductImg VALUES (11,'_o_t-shirt_nam_c_tr_n_i7tsh545i_t_m_than-ghi_190000.jpg');
-INSERT INTO dbo.ProductImg VALUES (12,'_o_t-shirt_nam_c_tr_n_i7tsh535i_xanh_r_u_250000.jpg.jpg');
-INSERT INTO dbo.ProductImg VALUES (12,'_o_t-shirt_nam_c_tr_n_i7tsh535i_xanh_c_v_t_250000.jpg');
-INSERT INTO dbo.ProductImg VALUES (13,'_o_t_shirt_n_c_tr_n_i9tsh553i_en_b_c_250k.jpg');
-INSERT INTO dbo.ProductImg VALUES (14,'_o_t_shirt_n_c_tr_n_i9tsh569i_en_190k.jpg');
-INSERT INTO dbo.ProductImg VALUES (15,'_o_t-shirt_n_c_tr_n_tay_xo_n_i9tsh545i_k_cam_190000.jpg');
-INSERT INTO dbo.ProductImg VALUES (16,'dosiin-zombie-blue-stripes-sweater-white-109071109071.jpg');
-INSERT INTO dbo.ProductImg VALUES (17,'dosiin-zombie-yellow-stripes-sweater-black-109091109091.jpg');
-INSERT INTO dbo.ProductImg VALUES (18,'dosiin-freakers-classic-logo-sweatersnavy-223758223758.jpg');
-INSERT INTO dbo.ProductImg VALUES (19,'dosiin-freakers-classic-logo-sweaterssport-grey-223763223763.jpg');
-INSERT INTO dbo.ProductImg VALUES (20,'dosiin-karihada-oops-i-did-it-again-115992115992.jpg');
-INSERT INTO dbo.ProductImg VALUES (20,'dosiin-karihada-oops-i-did-it-again-115995115995.jpg');
-INSERT INTO dbo.ProductImg VALUES (21,'dosiin-icon-denim-quan-jean-slim-fit-dark-blue-wbutterfly-charms-143605143605.jpg');
-INSERT INTO dbo.ProductImg VALUES (21,'dosiin-icon-denim-quan-jean-slim-fit-dark-blue-wbutterfly-charms-143607143607.jpg');
-INSERT INTO dbo.ProductImg VALUES (22,'dosiin-icon-denim-quan-jean-skinny-wash-tron-143621143621.jpg');
-INSERT INTO dbo.ProductImg VALUES (22,'dosiin-icon-denim-quan-jean-skinny-wash-tron-143622143622.jpg');
-INSERT INTO dbo.ProductImg VALUES (23,'dosiin-icon-denim-quan-jean-slim-dark-blue-wash-w-icon-denim-pocket-143645143645.jpg');
-INSERT INTO dbo.ProductImg VALUES (23,'dosiin-icon-denim-quan-jean-slim-dark-blue-wash-w-icon-denim-pocket-143646143646.jpg');
-INSERT INTO dbo.ProductImg VALUES (24,'dosiin-hyperdenim-vn-black-gnu-zipper-jean-202558202558.jpg');
-INSERT INTO dbo.ProductImg VALUES (24,'dosiin-hyperdenim-vn-black-gnu-zipper-jean-202559202559.jpg');
-INSERT INTO dbo.ProductImg VALUES (25,'dosiin-hyperdenim-vn-black-gao-zipper-jean-202799202799.jpg');
-INSERT INTO dbo.ProductImg VALUES (25,'dosiin-hyperdenim-vn-black-gao-zipper-jean-202800202800.jpg');
-INSERT INTO dbo.ProductImg VALUES (26,'dosiin-davies-dss-skirt-d-buckle-103410103410.jpeg');
-INSERT INTO dbo.ProductImg VALUES (26,'dosiin-davies-dss-skirt-d-buckle-103411103411.jpeg');
-INSERT INTO dbo.ProductImg VALUES (27,'dosiin-davies-dss-skirt-davies-label-103403103403.jpeg');
-INSERT INTO dbo.ProductImg VALUES (27,'dosiin-davies-dss-skirt-davies-label-103405103405.jpeg');
-INSERT INTO dbo.ProductImg VALUES (28,'dosiin-envylook-chan-vay-dai-arong-mau-mustard-envylook-a-long-skirt-8968989689.jpg');
-INSERT INTO dbo.ProductImg VALUES (28,'dosiin-envylook-chan-vay-dai-arong-mau-navy-envylook-a-long-skirtclone-8967689676.jpg');
-INSERT INTO dbo.ProductImg VALUES (29,'dosiin-envylook-chan-vay-cotton-dai-chun-co-dan-mau-black-envylook-eilett-skirt-8957789577.jpg');
-INSERT INTO dbo.ProductImg VALUES (29,'dosiin-envylook-chan-vay-cotton-dai-chun-co-dan-mau-black-envylook-eilett-skirt-8957889578.jpg');
-INSERT INTO dbo.ProductImg VALUES (30,'dosiin-envylook-quan-vay-vai-lanh-that-lung-mau-beige-envylook-linen-belt-skirtclone-7705877058.jpg');
-INSERT INTO dbo.ProductImg VALUES (30,'dosiin-envylook-quan-vay-vai-lanh-that-lung-mau-beige-envylook-linen-belt-skirtclone-7706277062.jpg');
-INSERT INTO dbo.ProductImg VALUES (31,'dosiin-nike-giay-chay-nam-nike-nike-air-zoom-winflo-cj-216832216832.jpg');
-INSERT INTO dbo.ProductImg VALUES (31,'dosiin-nike-giay-chay-nam-nike-nike-air-zoom-winflo-cj-216833216833.jpg');
-INSERT INTO dbo.ProductImg VALUES (32,'dosiin-nike-giay-nam-nike-benassi-slip-shoe-215487215487.jpg');
-INSERT INTO dbo.ProductImg VALUES (32,'dosiin-nike-giay-nam-nike-benassi-slip-shoe-215488215488.jpg');
-INSERT INTO dbo.ProductImg VALUES (33,'dosiin-nike-giay-nam-nike-benassi-slp-215474215474.jpg');
-INSERT INTO dbo.ProductImg VALUES (33,'dosiin-nike-giay-nam-nike-benassi-slp-215475215475.jpg');
-INSERT INTO dbo.ProductImg VALUES (34,'dosiin-vans-vans-slip-on-label-mix-209123209123.jpg');
-INSERT INTO dbo.ProductImg VALUES (34,'dosiin-vans-vans-slip-on-label-mix-209124209124.jpg');
-INSERT INTO dbo.ProductImg VALUES (35,'dosiin-vans-vans-skhi-208636208636.jpg');
-INSERT INTO dbo.ProductImg VALUES (35,'dosiin-vans-vans-skhi-208637208637.jpg');
-INSERT INTO dbo.ProductImg VALUES (36,'t_t_ch_n_nam_c_ng_n_pack_3_i7sok201h_mixed_freesize_50k_1.jpg');
-INSERT INTO dbo.ProductImg VALUES (37,'t_t_ch_n_nam_c_trung_17sok213_-_50k_2.jpg');
-INSERT INTO dbo.ProductImg VALUES (38,'t_t_ch_n_nam_c_ng_n_17sok217e-40k_2.jpg');
-INSERT INTO dbo.ProductImg VALUES (39,'t_t_ch_n_n_c_trung_-_19sok015e_-_35k_2.jpg');
-INSERT INTO dbo.ProductImg VALUES (40,'t_t_ch_n_n_c_ng_n_19sok222e-30k_2.jpg');
-INSERT INTO dbo.ProductImg VALUES (41,'img_8595.jpg');
-INSERT INTO dbo.ProductImg VALUES (41,'ba_l_ch_ng_g_m_vai_v8bpk302i_45x28x17_-_v_ng_-_690.000_3_.jpg');
-INSERT INTO dbo.ProductImg VALUES (42,'img_8597.jpg');
-INSERT INTO dbo.ProductImg VALUES (42,'ba_l_ch_ng_g_m_vai_v8bpk300i_36x25x10_en_-_590.000_2_.jpg');
-INSERT INTO dbo.ProductImg VALUES (43,'ba_l_ch_ng_s_c_ch_ng_th_m_n_c_i7bpk003i-001_29.14.43_-_en_-_590.000_.jpg');
-INSERT INTO dbo.ProductImg VALUES (43,'ba_l_ch_ng_s_c_ch_ng_th_m_n_c_i7bpk003i-001_29.14.43_-_en_-_590.000_2_.jpg');
-INSERT INTO dbo.ProductImg VALUES (44,'dosiin-adidas-ba-lo-tap-luyen-unisex-adidasathlts-id-bp-fj-152063152063.jpg');
-INSERT INTO dbo.ProductImg VALUES (44,'dosiin-adidas-ba-lo-tap-luyen-unisex-adidasathlts-id-bp-fj-152065152065.jpg');
-INSERT INTO dbo.ProductImg VALUES (45,'dosiin-adidas-ba-lo-tap-luyen-unisex-adidas-clas-bp-fabric-gl-220622220622.jpg');
-INSERT INTO dbo.ProductImg VALUES (45,'dosiin-adidas-ba-lo-tap-luyen-unisex-adidas-clas-bp-fabric-gl-220624220624.jpg');
-INSERT INTO dbo.ProductImg VALUES (46,'dosiin-flaans-day-chuyen-flaans-sharpstar-n-9458094580.jpg');
-INSERT INTO dbo.ProductImg VALUES (46,'dosiin-flaans-day-chuyen-flaans-sharpstar-n-9458194581.jpg');
-INSERT INTO dbo.ProductImg VALUES (47,'dosiin-flaans-nhan-flaans-bauli-r-124297124297.jpg');
-INSERT INTO dbo.ProductImg VALUES (47,'dosiin-flaans-nhan-flaans-bauli-r-124298124298.jpg');
-INSERT INTO dbo.ProductImg VALUES (48,'dosiin-flaans-nhan-flaans-vin-bold-r-126742126742.jpg');
-INSERT INTO dbo.ProductImg VALUES (48,'dosiin-flaans-nhan-flaans-vin-bold-r-126743126743.jpg');
-INSERT INTO dbo.ProductImg VALUES (49,'dosiin-flaans-day-chuyen-flaans-chainbz-n-124335124335.jpg');
-INSERT INTO dbo.ProductImg VALUES (49,'dosiin-flaans-day-chuyen-flaans-chainbz-n-124336124336.jpg');
-INSERT INTO dbo.ProductImg VALUES (50,'dosiin-flaans-day-chuyen-flaans-newmoon-n-9457494574.jpg');
-INSERT INTO dbo.ProductImg VALUES (50,'dosiin-flaans-day-chuyen-flaans-newmoon-n-9457594575.jpg');
+INSERT INTO dbo.ProductImg VALUES (1,'https://microless.com/cdn/products/ab2b19dfcb38ae46a0f708de8469c9c9-hi.jpg');
+INSERT INTO dbo.ProductImg VALUES (2,'https://eezepc.com/wp-content/uploads/2022/08/samsung-EEZEPC-3-3.jpg');
+INSERT INTO dbo.ProductImg VALUES (3,'https://th.bing.com/th/id/OIP.W7E9_frDRzdZ3xTu1HjuqQHaFC?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (4,'https://th.bing.com/th/id/OIP.a3G1CzQEdd8HHmhPC1rsPgHaGE?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (5,'https://th.bing.com/th/id/OIP.kJGKWiwi0qLdVi8w94-5IQHaFj?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (6,'https://th.bing.com/th/id/OIP.aoTVg4fyqVppniZd7jslmAHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (7,'https://th.bing.com/th/id/OIP.8cmUAXFJkpVlrs_YSju7XQHaD4?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (8,'https://th.bing.com/th/id/R.2cdb4e02cefbb8f70a3370e39ba7c6bb?rik=9Yoht8q3YJnCaw&riu=http%3a%2f%2fwww.avguide.ch%2fassets%2ffotostrecke%2f402850b3445c1bea0144db3ada080027%2fraw%2f7b_Sony_Alpha_7R_55mm_front_1920.jpg&ehk=AByTUs0XBsGjBmH73qaN765B3blPF9JJgdUy8ctxAk8%3d&risl=&pid=ImgRaw&r=0');
+INSERT INTO dbo.ProductImg VALUES (9,'https://th.bing.com/th/id/OIP.BN20IshEaKMOrAdr_3NsJgHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (10,'https://th.bing.com/th/id/OIP.134VJ44OStJo8DrF8-JnyAHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (11,'https://th.bing.com/th/id/OIP.7qaRJzDFveF1_pEvCA0-nwHaLF?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (12,'https://th.bing.com/th/id/OIP.dytTVah9MWmjfGDPVb7PjAHaFU?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (13,'https://th.bing.com/th/id/OIP.TH29LfSMeUMLvwgsIorfewHaEp?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (14,'https://th.bing.com/th/id/OIP.3rh1DmhnW3HpP51byI_z-QAAAA?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (15,'https://th.bing.com/th/id/OIP.3JrD3gbjI1jNhC0f7VtoPwHaEK?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (16,'https://th.bing.com/th/id/OIP.86wlQe5sAeDDHggB5Pe1XAHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (17,'https://image.biccamera.com/img/00000008390945_A01.jpg?sr.dw=600&sr.jqh=60&sr.dh=600&sr.mat=1');
+INSERT INTO dbo.ProductImg VALUES (18,'https://th.bing.com/th/id/OIP.7XVNKd-8-_OxrL4UF1s-XwHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (19,'https://th.bing.com/th/id/OIP.7U5z9VylJjv7s-3fZ3o2WAHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (20,'https://th.bing.com/th/id/R.d47c79c78d86c340e84d95bedda4629c?rik=pblV8uSOZ7Ui5A&pid=ImgRaw&r=0');
+INSERT INTO dbo.ProductImg VALUES (21,'_o_t-shirt_nam_c_tr_n_i7tsh535i_xanh_r_u_250000.jpg.jpg');
+INSERT INTO dbo.ProductImg VALUES (22,'_o_t-shirt_nam_c_tr_n_i7tsh535i_xanh_c_v_t_250000.jpg');
+INSERT INTO dbo.ProductImg VALUES (23,'_o_t_shirt_n_c_tr_n_i9tsh553i_en_b_c_250k.jpg');
+INSERT INTO dbo.ProductImg VALUES (24,'_o_t_shirt_n_c_tr_n_i9tsh569i_en_190k.jpg');
+INSERT INTO dbo.ProductImg VALUES (25,'_o_t-shirt_n_c_tr_n_tay_xo_n_i9tsh545i_k_cam_190000.jpg');
+INSERT INTO dbo.ProductImg VALUES (26,'dosiin-zombie-blue-stripes-sweater-white-109071109071.jpg');
+INSERT INTO dbo.ProductImg VALUES (27,'dosiin-zombie-yellow-stripes-sweater-black-109091109091.jpg');
+INSERT INTO dbo.ProductImg VALUES (28,'dosiin-freakers-classic-logo-sweatersnavy-223758223758.jpg');
+INSERT INTO dbo.ProductImg VALUES (29,'dosiin-freakers-classic-logo-sweaterssport-grey-223763223763.jpg');
+INSERT INTO dbo.ProductImg VALUES (30,'dosiin-karihada-oops-i-did-it-again-115992115992.jpg');
+INSERT INTO dbo.ProductImg VALUES (31,'dosiin-karihada-oops-i-did-it-again-115995115995.jpg');
+INSERT INTO dbo.ProductImg VALUES (32,'dosiin-icon-denim-quan-jean-slim-fit-dark-blue-wbutterfly-charms-143605143605.jpg');
+INSERT INTO dbo.ProductImg VALUES (33,'dosiin-icon-denim-quan-jean-slim-fit-dark-blue-wbutterfly-charms-143607143607.jpg');
+INSERT INTO dbo.ProductImg VALUES (34,'dosiin-icon-denim-quan-jean-skinny-wash-tron-143621143621.jpg');
+INSERT INTO dbo.ProductImg VALUES (35,'dosiin-icon-denim-quan-jean-skinny-wash-tron-143622143622.jpg');
+INSERT INTO dbo.ProductImg VALUES (36,'dosiin-icon-denim-quan-jean-slim-dark-blue-wash-w-icon-denim-pocket-143645143645.jpg');
+INSERT INTO dbo.ProductImg VALUES (37,'dosiin-icon-denim-quan-jean-slim-dark-blue-wash-w-icon-denim-pocket-143646143646.jpg');
+INSERT INTO dbo.ProductImg VALUES (38,'dosiin-hyperdenim-vn-black-gnu-zipper-jean-202558202558.jpg');
+INSERT INTO dbo.ProductImg VALUES (39,'dosiin-hyperdenim-vn-black-gnu-zipper-jean-202559202559.jpg');
+INSERT INTO dbo.ProductImg VALUES (40,'dosiin-hyperdenim-vn-black-gao-zipper-jean-202799202799.jpg');
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE Cart (
