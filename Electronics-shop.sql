@@ -454,15 +454,6 @@ INSERT INTO Product VALUES
 (N'Garmin Forerunner 955', N'Đồng hồ thông minh thể thao với GPS tích hợp và các tính năng theo dõi tập luyện chi tiết.', 12990000, 11990000, 40, 1, 2, 100, 1, 33, 0, 0, 0),
 (N'DJI Mini 3 Pro', N'Máy bay không người lái với camera 4K, cảm biến chống va chạm và thời gian bay 34 phút.', 21990000, 20990000, 15, 5, 2, 100, 1, 34, 0, 0, 0),
 (N'Corsair K95 RGB Platinum', N'Bàn phím cơ cao cấp với đèn RGB và các phím macro tùy chỉnh.', 5490000, 4990000, 60, 4, 2, 100, 1, 35, 0, 0, 0);
-(N'Apple AirPods Pro 2', N'Tai nghe không dây với công nghệ chống ồn chủ động và âm thanh không gian.', 6990000, 6590000, 70, 4, 2, 100, 1, 36, 0, 0, 0),
-(N'Dell Alienware M15 R7', N'Laptop gaming với chip Intel Core i9, RTX 3080 và màn hình 15.6 inch 240Hz.', 59990000, 57990000, 12, 3, 2, 100, 1, 37, 0, 0, 0),
-(N'Google Pixel 7 Pro', N'Smartphone với camera 50MP, màn hình OLED 6.7 inch và chip Tensor G2.', 23990000, 22990000, 45, 2, 2, 100, 1, 38, 0, 0, 0),
-(N'Asus ROG Strix G15', N'Laptop gaming với chip AMD Ryzen 9, RTX 3070 và màn hình 15.6 inch 300Hz.', 43990000, 42990000, 20, 3, 2, 100, 1, 39, 0, 0, 0),
-(N'Samsung Galaxy Watch 5 Pro', N'Đồng hồ thông minh với tính năng theo dõi sức khỏe, GPS và thời lượng pin dài.', 10990000, 9990000, 50, 1, 2, 100, 1, 40, 0, 0, 0),
-(N'GoPro Hero 11 Black', N'Camera hành trình với khả năng quay video 5.3K, chống nước và tính năng ổn định hình ảnh.', 11990000, 11490000, 30, 5, 2, 100, 1, 41, 0, 0, 0),
-(N'LG UltraFine 32UN880', N'Màn hình 32 inch 4K UHD với hỗ trợ HDR và cổng USB-C.', 17990000, 16990000, 25, 6, 2, 100, 1, 42, 0, 0, 0),
-(N'Bose QuietComfort 45', N'Tai nghe chống ồn không dây với âm thanh cao cấp và thời lượng pin lên đến 24 giờ.', 8990000, 8490000, 65, 4, 2, 100, 1, 43, 0, 0, 0),
-(N'Microsoft Xbox Series X', N'Máy chơi game với ổ SSD 1TB, hỗ trợ 4K và công nghệ Ray Tracing.', 15990000, 15490000, 35, 5, 2, 100, 1, 44, 0, 0, 0);
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -494,26 +485,18 @@ INSERT INTO dbo.ProductImg VALUES (17,'https://image.biccamera.com/img/000000083
 INSERT INTO dbo.ProductImg VALUES (18,'https://th.bing.com/th/id/OIP.7XVNKd-8-_OxrL4UF1s-XwHaHa?rs=1&pid=ImgDetMain');
 INSERT INTO dbo.ProductImg VALUES (19,'https://th.bing.com/th/id/OIP.7U5z9VylJjv7s-3fZ3o2WAHaHa?rs=1&pid=ImgDetMain');
 INSERT INTO dbo.ProductImg VALUES (20,'https://th.bing.com/th/id/R.d47c79c78d86c340e84d95bedda4629c?rik=pblV8uSOZ7Ui5A&pid=ImgRaw&r=0');
-INSERT INTO dbo.ProductImg VALUES (21,'_o_t-shirt_nam_c_tr_n_i7tsh535i_xanh_r_u_250000.jpg.jpg');
-INSERT INTO dbo.ProductImg VALUES (22,'_o_t-shirt_nam_c_tr_n_i7tsh535i_xanh_c_v_t_250000.jpg');
-INSERT INTO dbo.ProductImg VALUES (23,'_o_t_shirt_n_c_tr_n_i9tsh553i_en_b_c_250k.jpg');
-INSERT INTO dbo.ProductImg VALUES (24,'_o_t_shirt_n_c_tr_n_i9tsh569i_en_190k.jpg');
-INSERT INTO dbo.ProductImg VALUES (25,'_o_t-shirt_n_c_tr_n_tay_xo_n_i9tsh545i_k_cam_190000.jpg');
-INSERT INTO dbo.ProductImg VALUES (26,'dosiin-zombie-blue-stripes-sweater-white-109071109071.jpg');
-INSERT INTO dbo.ProductImg VALUES (27,'dosiin-zombie-yellow-stripes-sweater-black-109091109091.jpg');
-INSERT INTO dbo.ProductImg VALUES (28,'dosiin-freakers-classic-logo-sweatersnavy-223758223758.jpg');
-INSERT INTO dbo.ProductImg VALUES (29,'dosiin-freakers-classic-logo-sweaterssport-grey-223763223763.jpg');
-INSERT INTO dbo.ProductImg VALUES (30,'dosiin-karihada-oops-i-did-it-again-115992115992.jpg');
-INSERT INTO dbo.ProductImg VALUES (31,'dosiin-karihada-oops-i-did-it-again-115995115995.jpg');
-INSERT INTO dbo.ProductImg VALUES (32,'dosiin-icon-denim-quan-jean-slim-fit-dark-blue-wbutterfly-charms-143605143605.jpg');
-INSERT INTO dbo.ProductImg VALUES (33,'dosiin-icon-denim-quan-jean-slim-fit-dark-blue-wbutterfly-charms-143607143607.jpg');
-INSERT INTO dbo.ProductImg VALUES (34,'dosiin-icon-denim-quan-jean-skinny-wash-tron-143621143621.jpg');
-INSERT INTO dbo.ProductImg VALUES (35,'dosiin-icon-denim-quan-jean-skinny-wash-tron-143622143622.jpg');
-INSERT INTO dbo.ProductImg VALUES (36,'dosiin-icon-denim-quan-jean-slim-dark-blue-wash-w-icon-denim-pocket-143645143645.jpg');
-INSERT INTO dbo.ProductImg VALUES (37,'dosiin-icon-denim-quan-jean-slim-dark-blue-wash-w-icon-denim-pocket-143646143646.jpg');
-INSERT INTO dbo.ProductImg VALUES (38,'dosiin-hyperdenim-vn-black-gnu-zipper-jean-202558202558.jpg');
-INSERT INTO dbo.ProductImg VALUES (39,'dosiin-hyperdenim-vn-black-gnu-zipper-jean-202559202559.jpg');
-INSERT INTO dbo.ProductImg VALUES (40,'dosiin-hyperdenim-vn-black-gao-zipper-jean-202799202799.jpg');
+INSERT INTO dbo.ProductImg VALUES (21,'https://th.bing.com/th/id/OIP.Ia3PKpa1yYTp2IlQqWn36wAAAA?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (22,'https://th.bing.com/th/id/OIP.LI8_DPw56VA1lA-5x41fwwHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (23,'https://www.pcworld.com/wp-content/uploads/2021/09/hp-spectre-x360-14-1q881av-main.jpg-100877315-orig.jpeg?quality=50&strip=all');
+INSERT INTO dbo.ProductImg VALUES (24,'https://th.bing.com/th/id/OIP.tBNc74Sb0r6w_tauUJRMXAHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (25,'https://th.bing.com/th/id/OIP.hUvS6ZxL-RBFGnXDKdYN_wHaHa?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (26,'https://th.bing.com/th/id/R.4ca9bafa53e064300e77ce04bd6d7fd1?rik=ya%2fU0r%2b62CX5Vw&pid=ImgRaw&r=0');
+INSERT INTO dbo.ProductImg VALUES (27,'https://th.bing.com/th/id/OIP.Uod9g69hVzDFtqdlPWlLwgHaI7?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (28,'https://th.bing.com/th/id/OIP.QXnAKaQYgFqgw73OGGHazwAAAA?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (29,'https://th.bing.com/th/id/OIP.lBOIXY_J_O-G7ZOzPnaWJgHaEK?rs=1&pid=ImgDetMain');
+INSERT INTO dbo.ProductImg VALUES (30,'https://dji-vietnam.vn/wp-content/uploads/2022/05/danh-gia-dji-mini-3-pro-chi-tiet-6-1381x800.jpeg');
+INSERT INTO dbo.ProductImg VALUES (31,'https://th.bing.com/th/id/OIP.q9ab9RkdjQaEZN9F1LQK5QHaEK?rs=1&pid=ImgDetMain');
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -586,53 +569,27 @@ CREATE TABLE [dbo].[Order_Detail](
 
 
 GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 1, 1, N'Borsalino Bogart Fur Felt Fedora', 15, 1)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 1, 36, N'Apple AirPods Pro 2', 6590000, 2)
 GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 1, 2, N'Borsalino Seta Bicolore Fedora', 2, 3)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 1, 37, N'Dell Alienware M15 R7', 57990000, 1)
 GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 2, 3, N'Bailey Tate Braided Fedora', 5, 2)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 2, 38, N'Google Pixel 7 Pro', 22990000, 1)
 GO
-INSERT [dbo].[Order_Detail] ([Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 3, 4, N'Bailey Archer Braid Fedora', 6, 3)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 2, 39, N'Asus ROG Strix G15', 42990000, 1)
 GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 4, 5, N'Bailey Craig Braided Fedora', 150, 1)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 3, 40, N'Samsung Galaxy Watch 5 Pro', 9990000, 2)
 GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 5, 6, N'Mayser Calas Panama Straw Hat', 270000, 1)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 3, 41, N'GoPro Hero 11 Black', 11490000, 1)
 GO
-INSERT [dbo].[Order_Detail] ([Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 6, 7, N'Mayser Piero Panama Straw Hat', 90000, 2)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 4, 42, N'LG UltraFine 32UN880', 16990000, 1)
 GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES (7, 8, N'Mayser Nizza Panama Straw Hat', 1270000, 1)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 4, 43, N'Bose QuietComfort 45', 8490000, 1)
 GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 8, 9, N'Bailey Rockett Endura Telescope Crown Hat', 163000, 2)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 5, 44, N'Microsoft Xbox Series X', 15490000, 1)
 GO
-INSERT [dbo].[Order_Detail] ([Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 9, 10, N'Bailey Hanson Shantung Hat', 163000, 1)
+INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 5, 36, N'Apple AirPods Pro 2', 6590000, 3)
 GO
 
--- This month
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 11, N'Male T-Shirt I7TSH545I', 15, 5)
-GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 50, N'FLAANS 925 NewMoon N', 2, 1)
-GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 49, N'FLAANS ChainBZ_N', 5, 1)
-GO
-INSERT [dbo].[Order_Detail] ([Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 25, N'Black Gao Zipper Jean', 6, 3)
-GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 35, N'Vans Sk8-Hi', 150, 1)
-GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 15, N'Female T-Shirt I9TSH545I', 270000, 4)
-GO
-INSERT [dbo].[Order_Detail] ([Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 40, N'Female Sock I9SOK222E', 90000, 3)
-GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES (12, 8, N'Mayser Nizza Panama Straw Hat', 1270000, 1)
-GO
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 16, N'BLUE STRIPES SWEATER - WHITE', 163000, 2)
-GO
-INSERT [dbo].[Order_Detail] ([Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 12, 10, N'Bailey Hanson Shantung Hat', 163000, 1)
-GO
--- Last month
-INSERT [dbo].[Order_Detail] ( [Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 13, 1, N'Borsalino Bogart Fur Felt Fedora', 15, 1)
-GO
-INSERT [dbo].[Order_Detail] ([Order_ID], [ProductID], [ProductName], [ProductPrice], [Quantity]) VALUES ( 13, 10, N'Bailey Hanson Shantung Hat', 163000, 1)
-GO
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE ShipInfo (
@@ -717,15 +674,34 @@ Content nvarchar(2500),
 imageLink nvarchar(1000),
 )ON [PRIMARY]
 GO
-INSERT INTO dbo.Blog(Author,Title,Content,imageLink)VALUES(N'maintn',   N'Áo phông xám nữ, item mix đồ thời thượng',N'Áo phông xám là một item được nhiều bạn trẻ yêu thích. Khi xu hướng thời trang thế giới đang hướng đến những thứ đơn giản, tinh tế thì gam màu xám được đánh giá rất hiện đại, trẻ trung và là một trong những gam màu hot trend thời gian gần đây. 
+INSERT INTO Blog (Author, Title, Content, imageLink) VALUES 
+(N'Nguyễn Minh Khoa', N'Tầm quan trọng của Smartwatch trong cuộc sống hiện đại', 
+N'Smartwatch ngày càng trở thành một phần không thể thiếu trong cuộc sống hiện đại. Những mẫu như Apple Watch Series 8 GPS hay Samsung Galaxy Watch 5 Pro không chỉ giúp theo dõi sức khỏe mà còn là trợ lý cá nhân đắc lực. Với tính năng theo dõi nhịp tim, cảnh báo nhiệt độ và thậm chí là tính năng SOS khẩn cấp, chúng đảm bảo sức khỏe và sự an toàn cho người dùng.', 
+N'https://th.bing.com/th/id/OIP.oWbHl6QK4k_-P6PEMWj0mQHaHa?rs=1&pid=ImgDetMain'),
+GO
+INSERT INTO Blog (Author, Title, Content, imageLink) VALUES 
+(N'Trần Hoàng Nam', N'Laptop gaming mạnh mẽ cho game thủ', 
+N'Với sự phát triển không ngừng của các tựa game đòi hỏi phần cứng mạnh mẽ, các dòng laptop gaming như MSI Gaming Laptop GF65 Thin và Asus ROG Strix G15 đang là lựa chọn hàng đầu cho game thủ. Được trang bị card đồ họa RTX và màn hình tần số quét cao, các dòng máy này mang lại trải nghiệm mượt mà và hình ảnh sống động cho mọi tựa game nặng.', 
+N'https://th.bing.com/th/id/R.9b4cb7ed25fcab5f805bf47b0cf246a5?rik=WJCq8%2fewt6yuHg&riu=http%3a%2f%2fi.imgur.com%2ftEZ7D2U.jpg&ehk=FTWDFfTyPI8j%2bQdHcWznKRHn54Z59cB25Lyf0BOivD8%3d&risl=&pid=ImgRaw&r=0'),
+GO
+INSERT INTO Blog (Author, Title, Content, imageLink) VALUES 
+(N'Lê Thanh Huyền', N'Âm thanh vượt trội với tai nghe không dây', 
+N'Với sự phát triển của công nghệ âm thanh, tai nghe không dây như Bose QuietComfort 45 và AirPods Pro 2 mang lại chất lượng âm thanh tuyệt vời cùng khả năng chống ồn vượt trội. Những sản phẩm này không chỉ dành cho người yêu âm nhạc mà còn rất tiện dụng cho công việc và giải trí.', 
+N'https://th.bing.com/th/id/R.599243afe38cf63c68e3182a837ef5c9?rik=eMcevahsAF7BUQ&riu=http%3a%2f%2fantien.vn%2fuploaded%2ftai+nghe%2fsolo+2+wireless%2ftai-nghe-bluetooth-beats-solo-2-wireless-gia-re-65(1).jpg&ehk=zz8pp6tEuTyCde8SMhNwJJGA9fHfvC0nomuZ6GTdUXQ%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1'),
+GO
+INSERT INTO Blog (Author, Title, Content, imageLink) VALUES 
+(N'Phạm Văn Hải', N'Tai nghe không dây – Sự lựa chọn tối ưu cho người yêu công nghệ', 
+N'Tai nghe không dây đã trở thành xu hướng của thời đại, với những tính năng nổi bật như chống ồn, âm thanh vòm và kết nối Bluetooth mượt mà. Các sản phẩm nổi bật như Samsung Galaxy Buds2 Pro và Anker Soundcore Liberty 3 Pro đang thu hút sự quan tâm nhờ thiết kế nhỏ gọn, âm thanh chất lượng cao và thời lượng pin lâu.', 
+N'https://th.bing.com/th/id/OIP.2fpqNpOIhChwE2xbY51mXQHaHa?rs=1&pid=ImgDetMain'),
+GO
+INSERT INTO Blog (Author, Title, Content, imageLink) VALUES 
+(N'Nguyễn Thị Mai', N'Giải pháp lưu trữ hiệu quả với ổ cứng di động', 
+N'Ổ cứng di động ngày càng trở nên phổ biến với những tính năng như tốc độ truyền dữ liệu nhanh và khả năng chống va đập. Sản phẩm Samsung T7 Portable SSD 1TB là một trong những lựa chọn tốt nhất hiện nay, với thiết kế nhỏ gọn và dung lượng lưu trữ lớn, giúp người dùng dễ dàng mang theo mọi lúc mọi nơi.', 
+N'https://th.bing.com/th/id/OIP.uFV8E0L6vhR_DthjdXs-9wHaE8?rs=1&pid=ImgDetMain');
+GO
 
-Với áo phông xám, chị em có thể biến tấu linh hoạt trong cách phối đồ, lên đồ ấn tượng mà không lo nhạt nhòa, kém nổi bật. ',N'1.jpg')
-INSERT INTO dbo.Blog(Author,Title,Content,imageLink)VALUES(N'ngoc12',   N'Áo thun oversize chuẩn phong cách, ấn tượng',N'Áo phông oversize đang là một hot item dẫn đầu xu hướng thời trang giới trẻ hiện nay. Ngày càng nhiều các bạn trẻ yêu thích, ưa chuộng và đánh giá cao kiểu áo này. 
 
-Một item đầy mới mẻ, phá cách và tính ứng dụng thực tiễn cao như áo phông oversize quả thực sẽ thu hút sự quan tâm của rất nhiều bạn trẻ. ',N'2.jpg')
-INSERT INTO dbo.Blog(Author,Title,Content,imageLink)VALUES(N'minh123',  N'Blazzer, xu thế thời trang 2021',N'Với sự thay đổi liên tục, xu hướng thời trang luôn được cập nhật mới mẻ hơn, độc đáo, hiện đại và thu hút hơn. Những phong cách mới, xu thế thời trang hot luôn được mọi người quan tâm, đặc biệt là giới trẻ. Không thể phủ nhận ngành công nghiệp thời trang đang phát triển rất mạnh mẽ. Không chỉ đơn giản là cách ăn mặc, cách mix&match đồ hay diện đồ theo phong cách yêu thích, thời trang còn là sự đổi mới, phá cách và tràn đầy sức sáng tạo ấn tượng. Vậy bạn đã có ý tưởng gì cho mình chưa? Cùng Shope khám phá ngay nhé.',N'3.jpg')
-INSERT INTO dbo.Blog(Author,Title,Content,imageLink)VALUES(N'author_1',   N'Mix đồ cho nàng ngày hè',N'Bạn có thể chọn những gam màu sáng như trắng, cam, be,.. để tạo sự trẻ trung, tươi mới hoặc những gam màu trầm tối như đen, nâu, xanh rêu,... vừa đem đến sự tinh tế vừa phong cách, thời trang.',N'4.jpg')
-INSERT INTO dbo.Blog(Author,Title,Content,imageLink)VALUES(N'author_2',  N'Áo sơ mi cho nàng cực trẻ trung và cá tính',N'Áo sơ mi vốn là một item must-have trong tủ đồ của phái nữ bởi sự đơn giản, tinh tế; dễ phối đồ và có thể mặc trong hầu hết mọi tình huống như đi học, đi làm,đi chơi, đi phỏng vấn,...Thông dụng - dễ phối - chưa bao giờ lỗi mốt là những từ có thể dùng để miêu tả về áo sơ mi trắng. Là một item quốc dân luôn có sẵn trong tủ đồ của tất cả mọi người, những chiếc áo sơ mi trắng luôn khiến người mặc ngây ngất bởi hiệu quả thời trang mà nó mang lại: sự trẻ trung, lịch thiệp và phong cách. ',N'5.jpg')
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Create table PostCategory(
 ID int NOT NULL IDENTITY(1, 1) PRIMARY KEY,
@@ -750,82 +726,25 @@ constraint CategoryID_in_PostCategory FOREIGN KEY(CategoryID) REFERENCES PostCat
 )ON [PRIMARY]
 go
 SET IDENTITY_INSERT Post ON
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (1, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 1, N'poster1.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (2, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 1, N'poster2.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (3, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 2, N'Poster3.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (4, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 2, N'poster4.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (5, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 1, N'poster5.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (6, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 1, N'poster6.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (7, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 1, N'poster7.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (8, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 1, N'poster8.jpg')
-INSERT [dbo].[Post] ([ID], [Description], [UserID], [date], [CategoryID], [PostImgURL]) VALUES (9, N' QUẦN JEAN MỚI VỀ ĐẸP KHÔNG THỂ CƯỠNG LẠI ĐƯỢC!” Bạn sẽ có khả năng sở hữu mẫu quần jean siêu đẹp này chỉ với giá 1xxk/ hàng hóa. Chất liệu co dãn, thấm hút mồ hôi, tôn dáng, giúp người mặc trông thon gọn hơn.Đặc biệt khuyến mãi ưu đãi vào những dịp lễ lớn', 1, N'11/03/2021', 1, N'poster9.jpg')
+GO
+INSERT INTO Post (Description, UserID, date, CategoryID, PostImgURL) VALUES 
+(N'Apple Watch Series 8 GPS 45mm mang đến trải nghiệm tuyệt vời với màn hình Retina Always-On và các tính năng theo dõi sức khỏe tiên tiến. Với thiết kế sang trọng và chức năng ưu việt, đây là lựa chọn hoàn hảo cho những ai yêu thích công nghệ.', 1, '2024-09-01', 1, 'https://th.bing.com/th/id/OIP.liRl2-wFlSTbQj0q3xBEzAHaHa?rs=1&pid=ImgDetMain'),
+GO
+INSERT INTO Post (Description, UserID, date, CategoryID, PostImgURL) VALUES 
+(N'Samsung Galaxy Watch 5 Pro 45mm không chỉ là một smartwatch cao cấp mà còn cung cấp tính năng theo dõi sức khỏe toàn diện và thiết kế chống nước 5ATM, giúp bạn yên tâm trong mọi tình huống.', 2, '2024-09-02', 1, 'https://th.bing.com/th/id/R.3cbc6937fec6d9aa4437d0daab7d9289?rik=QjuLWqe2TVnoDA&pid=ImgRaw&r=0'),
+GO
+INSERT INTO Post (Description, UserID, date, CategoryID, PostImgURL) VALUES 
+(N'Với Dell XPS 13 9310, bạn sẽ trải nghiệm một chiếc máy tính xách tay 13 inch với màn hình 4K UHD cảm ứng và chip Intel Core i7 thế hệ 11, mang đến hiệu suất vượt trội và chất lượng hình ảnh sắc nét.', 3, '2024-09-03', 1, 'https://th.bing.com/th/id/R.b0ebe4ae106599f6ac6140a254f8c5fa?rik=WPHuVTGCQpxt9w&pid=ImgRaw&r=0'),
+GO
+INSERT INTO Post (Description, UserID, date, CategoryID, PostImgURL) VALUES 
+(N'MSI Gaming Laptop GF65 Thin là một lựa chọn tuyệt vời cho game thủ với chip Intel Core i7 và card đồ họa RTX 3060. Màn hình 144Hz cung cấp trải nghiệm chơi game mượt mà và hình ảnh sống động.', 4, '2024-09-04', 1, 'https://paidfreedroid.com/wp-content/uploads/2020/12/Dell-XPS-13-9310-scaled.jpg'),
+GO
+INSERT INTO Post (Description, UserID, date, CategoryID, PostImgURL) VALUES 
+(N'Bose QuietComfort 45 mang đến âm thanh chất lượng cao và khả năng chống ồn tuyệt đối. Với thời lượng pin lên đến 24 giờ, đây là tai nghe lý tưởng cho những ai yêu thích âm nhạc và cần sự tập trung tối đa.', 5, '2024-09-05', 1, 'https://th.bing.com/th/id/OIP.CzWAVo3tIU9KBMW236srwAHaE_?rs=1&pid=ImgDetMain');
+GO
+
 SET IDENTITY_INSERT Post OFF
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-CREATE TABLE CBanner
-(
-	ID int NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-	Img VARCHAR(2500),
-	Title NVARCHAR(2500),
-	[desc] NVARCHAR(2500)
-)
-INSERT INTO dbo.CBanner(Img,Title,[desc])VALUES('nike.png',  N'NIKE',  N'Just Do It !'  )
-INSERT INTO dbo.CBanner(Img,Title,[desc])VALUES('gucci.png',  N'GUCCI',  N'We go beyond just great !'  )
-INSERT INTO dbo.CBanner(Img,Title,[desc])VALUES('chanel.jpg',  N'CHANEL',  N'I don’t do fashion. I am fashion'  )
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-CREATE TABLE Banner
-(
-	ID int NOT NULL IDENTITY(1, 1) PRIMARY KEY,
-	Img VARCHAR(2500),
-)
-INSERT INTO dbo.Banner VALUES('banner10.png')
-INSERT INTO dbo.Banner VALUES('banner35.png')
-INSERT INTO dbo.Banner VALUES('banner40.png')
-INSERT INTO dbo.Banner VALUES('banner60.png')
-INSERT INTO dbo.Banner VALUES('banner80.png')
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-CREATE TABLE dbo.[ChatFriend](
-	[uId] [int] NOT NULL,
-	[friendId] [int] NOT NULL,
-	FOREIGN KEY ([uId]) REFERENCES dbo.[Users](UserID),
-	FOREIGN KEY (friendId) REFERENCES dbo.[Users](UserID),
-)
-go
-INSERT [dbo].[ChatFriend] ([uId], [friendId]) VALUES (6, 1);
-INSERT [dbo].[ChatFriend] ([uId], [friendId]) VALUES (6, 2);
-INSERT [dbo].[ChatFriend] ([uId], [friendId]) VALUES (6, 3);
-INSERT [dbo].[ChatFriend] ([uId], [friendId]) VALUES (1, 6);
-INSERT [dbo].[ChatFriend] ([uId], [friendId]) VALUES (2, 6);
-INSERT [dbo].[ChatFriend] ([uId], [friendId]) VALUES (3, 6);
----------------------------------------------------------------------------------------------------------------------------------------------------------
-CREATE TABLE dbo.[ChatMessage](
-	[mId] [int] IDENTITY(1,1) NOT NULL,
-	[fromId] [int] NOT NULL,
-	[toId] [int] NOT NULL,
-	[content] [nvarchar](200) NOT NULL,
-	[dateCreated] [datetime] DEFAULT GETDATE() NOT NULL,
-	[status] [int] DEFAULT 1 NULL,
-	FOREIGN KEY ([fromId]) REFERENCES dbo.[Users](UserID),
-	FOREIGN KEY ([toId]) REFERENCES dbo.[Users](UserID),
-)
-go
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 1, N'Hi', CAST(N'2021-10-26 22:38:21.373' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 1, N'Nice to meet you', CAST(N'2021-10-26 22:38:30.103' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (1, 6, N'Thanks', CAST(N'2021-10-26 22:38:36.727' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (1, 6, N'Thanks', CAST(N'2021-10-26 22:38:43.073' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 2, N'Hello', CAST(N'2021-10-27 10:39:30.800' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 2, N'How do you do', CAST(N'2021-10-27 10:39:42.200' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (2, 6, N'How do you do', CAST(N'2021-10-27 10:39:47.860' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (2, 6, N'See you later', CAST(N'2021-10-27 10:39:56.893' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 1, N'how are you', CAST(N'2021-10-28 08:51:27.353' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 1, N'good, thanks', CAST(N'2021-10-29 13:48:07.780' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 1, N'great', CAST(N'2021-10-29 13:53:25.967' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 3, N'how are you', CAST(N'2021-10-29 14:00:21.740' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 3, N'fine, thanks', CAST(N'2021-10-29 14:00:36.213' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (3, 6, N'Hello', CAST(N'2021-10-29 14:00:56.170' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (3, 6, N'hi', CAST(N'2021-10-29 14:01:33.273' AS DateTime), 1);
-INSERT [dbo].[ChatMessage] ([fromId], [toId], [content], [dateCreated], [status]) VALUES (6, 1, N'Hey', CAST(N'2021-10-29 14:15:11.593' AS DateTime), 1);
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE ShipStatus(
